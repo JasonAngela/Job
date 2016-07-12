@@ -12,11 +12,19 @@ import java.util.List;
  */
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/")
 public class UserController {
     //service类
     @Autowired
     private UserService userService;
+
+    @RequestMapping("/index")
+    public String index() throws Exception{
+        return "index";
+    }
+
+
+
 
     /**
      * 查找所用用户控制器方法
